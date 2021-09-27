@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="An Aside About Everything" startnode="1" creator="Twine" creator-version="2.3.13" ifid="E2BE3D1E-4C61-402E-A8B8-8EF0E931EA4F" zoom="0.25" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(https://fonts.googleapis.com/css?family=Montserrat);
+	<tw-storydata name="An Aside About Everything" startnode="1" creator="Twine" creator-version="2.3.13" ifid="E2BE3D1E-4C61-402E-A8B8-8EF0E931EA4F" zoom="0.6" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
 body {
@@ -119,6 +119,10 @@ body {
   position:absolute;
   margin:-2.8em;
   font-size:14px;
+}
+
+#menu{
+  text-align:left;
 }
 
 @font-face {
@@ -391,9 +395,9 @@ $(document).on(':passagestart', function (ev) {
 
 /*! <<shake>> macro set for SugarCube 2.x */
 !function(){"use strict";if("undefined"==typeof version||"undefined"==typeof version.title||"SugarCube"!==version.title||"undefined"==typeof version.major||version.major<2||"undefined"==typeof version.minor||version.minor<5)throw new Error("<<shake>> macro requires SugarCube 2.5.0 or greater, aborting load");Macro.add("shake",{tags:null,handler:function(){var duration=this.args.length>0?this.args[0]:1/0,shakeClass="shake";if(1/0!==duration)try{duration=Math.max(Engine.minDomActionDelay,Util.fromCssTime(duration))}catch(e){return this.error(e.message)}Config.debug&&this.debugView.modes({block:!0});var $wrapper=jQuery(document.createElement("span"));$wrapper.addClass("macro-"+this.name+" "+shakeClass).wiki(this.payload[0].contents).appendTo(this.output),1/0!==duration&&setTimeout(function(){$wrapper.removeClass(shakeClass)},Engine.minDomActionDelay+duration)}}),Macro.add(["shakescreen","shaketarget"],{handler:function(){var $targets,duration,shakeClass;if("shakescreen"===this.name)$targets=jQuery("#passages"),duration=this.args.length>0?this.args[0]:1/0,shakeClass="shake-block";else{if(0===this.args.length)return this.error("no selector specified");if($targets=jQuery(this.args[0]),0===$targets.length)return this.error('no elements matched the selector "'+this.args[0]+'"');duration=this.args.length>1?this.args[1]:1/0,shakeClass="block"===jQuery($targets[0]).css("display")?"shake-block":"shake"}if("stop"===duration)return void $targets.removeClass(shakeClass);if(1/0!==duration)try{duration=Math.max(Engine.minDomActionDelay,Util.fromCssTime(duration))}catch(e){return this.error(e.message)}$targets.addClass(shakeClass),1/0!==duration&&setTimeout(function(){$targets.removeClass(shakeClass)},Engine.minDomActionDelay+duration)}})}();
-</script><tw-tag name="Inner-Ring" color="green"></tw-tag>,<tw-tag name="Item" color="red"></tw-tag>,<tw-tag name="Lowest-Point" color="blue"></tw-tag>,<tw-tag name="Menu" color="yellow"></tw-tag>,<tw-tag name="Outer-Ring" color="red"></tw-tag>,<tw-tag name="People" color="purple"></tw-tag>,<tw-tag name="U" color="orange"></tw-tag>,<tw-tag name="the-Void" color="purple"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="1569,32" size="100,100">&lt;&lt;timedinsert 1.4s&gt;&gt;//&quot;I thought to invent a game of knowledge,//&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;timedinsert 4.2s&gt;&gt;// I considered how it should be done.//&lt;&lt;/timedinsert&gt;&gt; &lt;&lt;timedinsert 7s&gt;&gt;//Next I defined it, making it as you see.&quot;//&lt;&lt;/timedinsert&gt;&gt;
+</script><tw-tag name="Inner-Ring" color="green"></tw-tag>,<tw-tag name="Item" color="red"></tw-tag>,<tw-tag name="Lowest-Point" color="blue"></tw-tag>,<tw-tag name="Menu" color="yellow"></tw-tag>,<tw-tag name="Outer-Ring" color="red"></tw-tag>,<tw-tag name="People" color="purple"></tw-tag>,<tw-tag name="U" color="orange"></tw-tag>,<tw-tag name="the-Void" color="purple"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="1569,32" size="100,100">&lt;&lt;timedinsert 0.7s&gt;&gt;//&quot;How mysterious is the Lord,//&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;timedinsert 2.8s&gt;&gt;// that He amuses Himself with such strange creatures?&quot;//&lt;&lt;/timedinsert&gt;&gt;
 
-&lt;&lt;timedinsert 9.8s t8n&gt;&gt;-Nicolaus Cusanus&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;timedinsert 12.6s&gt;&gt;
+&lt;&lt;timedinsert 5.6s t8n&gt;&gt;-János Valuska&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;timedinsert 8.4s&gt;&gt;
 
 [[Begin|Throw the ball]]
 &lt;&lt;/timedinsert&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Throw the ball3" tags="" position="1749,174" size="100,100">&lt;&lt;if $MissingGirlViewed eq false&gt;&gt;&lt;&lt;audio &quot;missed&quot; play&gt;&gt;&lt;&lt;/if&gt;&gt;He throws the ball. It bounces back and flies past His distracted hand. It rolls to a stop on the floor.
@@ -429,12 +433,18 @@ Last seen: October 4, 2███
 &lt;&lt;set $ballTrash = true&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Inventory" tags="Menu" position="433,277" size="200,100">&lt;&lt;if $inventory.length == 0&gt;&gt;You are not carrying anything.&lt;&lt;else&gt;&gt;You are carrying:
 &lt;&lt;invWithLinks&gt;&gt; &lt;&lt;endif&gt;&gt;
 
-&lt;&lt;link &quot;Return&quot; $return&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryMenu" tags="" position="252,120" size="200,100">[[Inventory]]
-[[People of Interest]]
-&lt;&lt;if $inVoid eq false&gt;&gt;[[Return to the Void|To The Void]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;link &quot;Return&quot; $return&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryMenu" tags="" position="252,120" size="200,100">&lt;a data-passage=&quot;Inventory&quot;&gt;&lt;img src=&#39;inventory.svg&#39; style=&#39;height:21px;-webkit-filter: drop-shadow(1px 1px 1px #000);filter: drop-shadow(1px 1px 1px #000);&#39;&gt; Inventory&lt;/a&gt;
+&lt;area shape=&quot;rect&quot; coords=&quot;25,25,75,75&quot; data-passage=&quot;Inventory&quot;&gt;
+&lt;img data-passage=Inventory&gt;Inventory&lt;/button&gt;
+&lt;a data-passage=&quot;People of Interest&quot;&gt;&lt;img src=&#39;persons.svg&#39; style=&#39;height:21px;-webkit-filter: drop-shadow(1px 1px 1px #000);filter: drop-shadow(1px 1px 1px #000);&#39;&gt; People of Interest&lt;/a&gt;
+&lt;area shape=&quot;rect&quot; coords=&quot;25,25,75,75&quot; data-passage=&quot;People of Interest&quot;&gt;
+&lt;img data-passage=People of Interest&gt;People of Interest&lt;/button&gt;
+&lt;&lt;if $inVoid eq false&gt;&gt;&lt;a data-passage=&quot;To The Void&quot;&gt;&lt;img src=&#39;void.svg&#39; style=&#39;height:21px;-webkit-filter: drop-shadow(1px 1px 1px #000);filter: drop-shadow(1px 1px 1px #000);&#39;&gt; Return to the Void&lt;/a&gt;
+&lt;area shape=&quot;rect&quot; coords=&quot;25,25,75,75&quot; data-passage=&quot;To The Void&quot;&gt;
+&lt;img data-passage=To The Void&gt;To The Void&lt;/button&gt;&lt;&lt;/if&gt;&gt;
 [[Jump to Inner Ring|gate2]]
 [[Jump to Lowest Point|gate3-1]]
-[[Jump to Katie|gate4]]
+[[Jump to EndVoid|gate4]]
 [[DevConsole]]</tw-passagedata><tw-passagedata pid="9" name="StoryInit" tags="" position="249,7" size="200,100">&lt;&lt;initInv&gt;&gt;
 &lt;&lt;initPeople&gt;&gt;
 &lt;&lt;set $return = &#39;&#39;&gt;&gt;
@@ -453,9 +463,11 @@ Template.add(&#39;K&#39;, function () {
 Template.add(&#39;Alice&#39;, function () {
   return &quot;Arisu&quot;;
 });
+
+Template.add(&#39;time&#39;, [&#39;I only meant to stay a while...&#39;, &#39;Just on the border of your waking mind...&#39;,&#39;The visions dancing in my mind...&#39;,&#39;Am I awake or do I dream...&#39;,&#39;I wonder...is this the way life is meant to be...&#39;]);
 &lt;&lt;/script&gt;&gt;
 
-&lt;&lt;if $knownIliza1 == true&gt;&gt;&lt;&lt;script&gt;&gt;
+&lt;&lt;if $ilizaSpoken == true&gt;&gt;&lt;&lt;script&gt;&gt;
 Template.add(&#39;Iliza&#39;, function () {
   return &quot;Iliza&quot;;
 });
@@ -479,7 +491,7 @@ It&#39;s smooth to the touch.
 
 [[Confront the figure]]</tw-passagedata><tw-passagedata pid="14" name="The Void" tags="To-the-Void" position="803,100" size="100,100">&lt;&lt;if $voidLevel eq 1&gt;&gt;The Void&#39;s only light illuminates the maze of red yarn. A pin with the tiniest bit of torn paper is at its center.&lt;&lt;/if&gt;&gt;&lt;&lt;if $voidLevel eq 2&gt;&gt;The Void&#39;s spotlights split their attention between the maze of red yarn and a vacant office desk.&lt;&lt;/if&gt;&gt;&lt;&lt;if $voidLevel eq 3&gt;&gt;The Void&#39;s spotlights shine brightly on the maze of red yarn, a vacant office desk, and a makeshift bedroom.&lt;&lt;/if&gt;&gt;
 
-[[Examine web of yarn]]&lt;&lt;if $ballTrash == true&gt;&gt;&lt;br \&gt;[[Examine trash]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $voidLevel eq 2&gt;&gt;&lt;br \&gt;[[Examine the vacant desk]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $voidLevel eq 3&gt;&gt;&lt;br \&gt;[[Examine the bedroom]]&lt;&lt;/if&gt;&gt;
+[[Examine web of yarn]]&lt;&lt;if $ballTrash == true&gt;&gt;&lt;br \&gt;[[Examine trash]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $voidLevel eq 2&gt;&gt;&lt;br \&gt;[[Examine the vacant desk]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $voidLevel eq 3&gt;&gt;&lt;br \&gt;[[Examine the kitchen]]&lt;&lt;/if&gt;&gt;
 
 [[Leave the Void]]</tw-passagedata><tw-passagedata pid="15" name="To The Void" tags="To-the-Void" position="601,95" size="100,100">&lt;&lt;set $inVoid = true&gt;&gt;&lt;&lt;audio &quot;void&quot; volume 0.1 play&gt;&gt;He closes his eyes. When He opens them, He is back in [[the Void|The Void]].</tw-passagedata><tw-passagedata pid="16" name="Confront the figure" tags="" position="6461,681" size="100,100">&lt;&lt;set $inVoid = false&gt;&gt;He approaches the figure. A bright pair of eyes peer out at Him from under a dark shawl.
 
@@ -492,25 +504,25 @@ It&#39;s smooth to the touch.
 &quot;You should get going soon,&quot; she says.
 
 [[&quot;I was just on my way&quot;]]
-[[&quot;Have you seen this girl?&quot; (Present flyer)|Have you seen this girl?]]</tw-passagedata><tw-passagedata pid="19" name="&quot;I was just on my way&quot;" tags="" position="6140,1514" size="100,100">&quot;The way you were standing there, I didn&#39;t think you&#39;d ever start moving,&quot; says Luna.
+[[&quot;Have you seen this girl?&quot; (Present flyer)|Have you seen this girl?]]</tw-passagedata><tw-passagedata pid="19" name="&quot;I was just on my way&quot;" tags="" position="6188.333333333333,1515.6666666666667" size="100,100">&quot;The way you were standing there, I didn&#39;t think you&#39;d ever start moving,&quot; says Luna.
 
 [[&quot;I was just resting my eyes&quot;]]
-[[Go to the city]] </tw-passagedata><tw-passagedata pid="20" name="&quot;I was thinking about that girl&quot;" tags="" position="5890,1523" size="100,100">&quot;You&#39;ve been thinking about her for a while now,&quot; says Luna.
+[[Head into town|Go to the city]]</tw-passagedata><tw-passagedata pid="20" name="&quot;I was thinking about that girl&quot;" tags="" position="5890,1523" size="100,100">&quot;You&#39;ve been thinking about her for a while now,&quot; says Luna.
 
-[[&quot;Have you seen her?&quot; (Present flyer)|Have you seen this girl?]]</tw-passagedata><tw-passagedata pid="21" name="Have you seen this girl?" tags="" position="6008,1670" size="100,100">Luna glances dismissively at the flyer in His hand.
+[[&quot;Have you seen her?&quot; (Present flyer)|Have you seen this girl?]]</tw-passagedata><tw-passagedata pid="21" name="Have you seen this girl?" tags="" position="5936.333333333333,1673.3333333333333" size="100,100">Luna glances dismissively at the flyer in His hand.
 
 &quot;I know what she looks like,&quot; Luna says.
-&quot;And no,  I haven&#39;t seen her. Head up into the city. You&#39;re not going to find her loitering around a dock.&quot;
+&quot;And no,  I haven&#39;t seen her. Head up into town. You&#39;re not going to find her loitering around a dock.&quot;
 
 [[&quot;Okay, thanks.&quot;]]
-[[&quot;You&#39;re loitering on a dock&quot;]]</tw-passagedata><tw-passagedata pid="22" name="&quot;Okay, thanks.&quot;" tags="" position="5857,1818" size="100,100">He puts the flyer away and heads up the stairs. Luna&#39;s eyes follow Him as He saunters away.
+[[&quot;You&#39;re loitering on a dock&quot;]]</tw-passagedata><tw-passagedata pid="22" name="&quot;Okay, thanks.&quot;" tags="" position="6083,1854" size="100,100">He puts the flyer away and heads up the stairs. Luna&#39;s eyes follow Him as He saunters away.
 
-[[Go to the city]]</tw-passagedata><tw-passagedata pid="23" name="&quot;You&#39;re loitering on a dock&quot;" tags="" position="6182,1722" size="100,100">&quot;And I&#39;m not the girl you&#39;re looking for,&quot; Luna says.
+[[Head into town|Go to the city]]</tw-passagedata><tw-passagedata pid="23" name="&quot;You&#39;re loitering on a dock&quot;" tags="" position="6182,1722" size="100,100">&quot;And I&#39;m not the girl you&#39;re looking for,&quot; Luna says.
 &quot;So get going.&quot;
 
-[[&quot;Okay, thanks.&quot;]] </tw-passagedata><tw-passagedata pid="24" name="Go to the city" tags="" position="5934,1970" size="100,100">At the top the stairs, He is met with a dark, circular landscape populated with a sparsity of dim lampposts. They provide just enough light for Him to see down the looping path ahead. The dull hum of distant conversation and constantly-running machinery fill the air with a tepid white noise.
+[[&#39;&quot;Alright, alright.&quot;&#39;|&quot;Okay, thanks.&quot;]] </tw-passagedata><tw-passagedata pid="24" name="Go to the city" tags="" position="5882.333333333333,1921.6666666666667" size="100,100">At the top the stairs, He is met with a dark, circular landscape populated with a sparsity of dim lampposts. They provide just enough light for Him to see down the looping path ahead. The dull hum of distant conversation and constantly-running machinery fill the air with a tepid white noise.
 
-[[Go down Main Street]]</tw-passagedata><tw-passagedata pid="25" name="Go down Main Street" tags="" position="5934,2120" size="100,100">He walks the path, light fading from behind Him as it grows brighter before Him. His twists His head from side to side and observes the buildings surrounding Him.
+[[Go down Main Street]]</tw-passagedata><tw-passagedata pid="25" name="Go down Main Street" tags="" position="5934,2120" size="100,100">He walks the path away from the docks; they fall to darkness as a small town comes into view. He twists His head from side to side and observes the buildings surrounding Him.
 
 On the outer side of the looping road, a bar. Further down, a mountainous pile of electronic waste. On the inner side, a gigantic hole; colloquially called the Mine.
 
@@ -542,25 +554,23 @@ He doesn&#39;t remember writing this.
 &lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Enter the bar" tags="" position="5934,2270" size="100,100">&lt;&lt;audio &quot;ring&quot; play&gt;&gt;He pushes His way into the bar. There is only one patron; a lone woman. Across from her is the bartender, idly shaking a cocktail shaker.
 
 [[Talk to the bartender]]
-[[Talk to the patron]]
+&lt;&lt;if $ilizaSpoken == false&gt;&gt;[[Talk to the patron]]&lt;&lt;elseif $ilizaSpoken == true&gt;&gt;[[Talk to Iliza]]&lt;&lt;/if&gt;&gt;
 [[Return to Main Street|Go down Main Street]]</tw-passagedata><tw-passagedata pid="32" name="Talk to the bartender" tags="" position="5816,2398" size="100,100">&lt;&lt;if $bartenderTalked eq true&gt;&gt;The bartender seems singularly focused on their continuous shaking.&lt;br \&gt;He wonders how the ice inside the shaker is still solid.&lt;&lt;else&gt;&gt;The bartender seems singularly focused on their continuous shaking.&lt;&lt;set $bartenderTalked = true&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 [[&quot;Gin &amp; Tonic&quot;]]
 &lt;&lt;if $inventory.indexOf(&quot;Beer&quot;) == -1&gt;&gt;[[&quot;Beer&quot;]]&lt;br \&gt;&lt;&lt;/if&gt;&gt;
-[[Return|At the bar]]</tw-passagedata><tw-passagedata pid="33" name="Talk to the patron" tags="" position="6135,2371" size="100,100">He takes a seat at the bar next to the lone patron. She ignores him, preferring to sip on her bright &lt;span style=&quot;color:blue;&quot;&gt;blue&lt;/span&gt; cocktail.
+[[Return|At the bar]]</tw-passagedata><tw-passagedata pid="33" name="Talk to the patron" tags="" position="6163,2322" size="100,100">He takes a seat at the bar next to the lone patron. She ignores Him, preferring to sip on a bright blue cocktail.
 
 [[&#39;&quot;What&#39;s your name?&quot;&#39;|Iliza introduction1]]
-[[&#39;&quot;Fancy meeting you here&quot;&#39;|Iliza introduction2]]
-[[&quot;Have you seen this girl?&quot; (Present flyer)|Have you seen this girl? Iliza]]
-</tw-passagedata><tw-passagedata pid="34" name="Iliza introduction1" tags="" position="5900,2552" size="100,100">The patron&#39;s pupil lingers in the corner of her eye, surveying Him thoroughly.
+[[&#39;&quot;Fancy meeting you here.&quot;&#39;|Iliza introduction2]]
+[[&quot;Have you seen this girl?&quot; (Present flyer)|Have you seen this girl? Iliza]]&lt;&lt;set $ilizaSpoken = true&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Iliza introduction1" tags="" position="5900,2552" size="100,100">The patron&#39;s pupil lingers in the corner of her eye, surveying Him thoroughly.
 
 &quot;&lt;span id=&quot;add&quot;&gt;Iliza&lt;/span&gt;. Why?&quot;
 
 [[(Shrugs) &quot;Thought I&#39;d ask.&quot;]]
-&lt;&lt;addToPeople Iliza&gt;&gt;
-&lt;&lt;set $knownIliza1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Iliza introduction2" tags="" position="6050,2554" size="100,100">With a raised eyebrow, the patron responds, &quot;Have we met?&quot;
+[[&quot;Have you seen this girl?&quot; (Present flyer)|Have you seen this girl? Iliza]]&lt;&lt;addToPeople Iliza&gt;&gt;&lt;&lt;set $knownIliza1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Iliza introduction2" tags="" position="6020,2820.6666666666665" size="100,100">With a raised eyebrow, the patron responds, &quot;Have we met?&quot;
 
-[[(Smile) &quot;Not yet&quot;]]</tw-passagedata><tw-passagedata pid="36" name="(Shrugs) &quot;Thought I&#39;d ask.&quot;" tags="" position="5900,2704" size="100,100">[[&quot;Have you seen this girl?&quot; (Present flyer)|Have you seen this girl? Iliza]]</tw-passagedata><tw-passagedata pid="37" name="Leave the Void" tags="To-the-Void" position="1043,250" size="100,100">He closes his eyes once again. When he opens them, he finds &lt;&lt;link &quot;the Void is gone&quot; $return&gt;&gt;&lt;&lt;/link&gt;&gt;.
+[[(Smile) &quot;Not yet&quot;]]</tw-passagedata><tw-passagedata pid="36" name="(Shrugs) &quot;Thought I&#39;d ask.&quot;" tags="" position="5829.333333333334,2808.3333333333335" size="100,100">[[&quot;Have you seen this girl?&quot; (Present flyer)|Have you seen this girl? Iliza]]</tw-passagedata><tw-passagedata pid="37" name="Leave the Void" tags="To-the-Void" position="1043,250" size="100,100">He closes his eyes once again. When he opens them, he finds &lt;&lt;link &quot;the Void is gone&quot; $return&gt;&gt;&lt;&lt;/link&gt;&gt;.
 &lt;&lt;set $inVoid = false&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="&quot;Gin &amp; Tonic&quot;" tags="" position="5642,2277" size="100,100">&quot;Did you know,&quot; the bartender says, &quot;the gin &amp; tonic is the most common cocktail chosen by men?&quot;
 
 The bartender pulls a chilled glass from beneath the bar and pours the contents of the cocktail shaker inside.
@@ -601,32 +611,41 @@ The bartender sets the cocktail shaker down and pulls a cold bottle of beer from
 
 &quot;Of course you were,&quot; she says. &quot;You should get going soon.&quot;
 
-[[&quot;Okay, thanks.&quot;]]
+[[&quot;Okay, thanks.&quot;|Ok thanks no flyer]]
 [[&quot;Have you seen this girl?&quot; (Present flyer)|Have you seen this girl?]]</tw-passagedata><tw-passagedata pid="49" name="At the bar" tags="" position="5727,2076" size="100,100">There is only one patron; a lone woman. Across from her is the bartender, idly shaking a cocktail shaker.
 
 [[Talk to the bartender]]
-[[Talk to the patron]]
+&lt;&lt;if $ilizaSpoken == false&gt;&gt;[[Talk to the patron]]&lt;&lt;elseif $ilizaSpoken == true&gt;&gt;[[Talk to Iliza]]&lt;&lt;/if&gt;&gt;
 [[Return to Main Street|Go down Main Street]]</tw-passagedata><tw-passagedata pid="50" name="(Smile) &quot;Not yet&quot;" tags="" position="6170,2704" size="100,100">?Iliza turns away in mild annoyance. His smile fades into a frown.
 
 [[&quot;Have you seen this girl?&quot; (Present flyer)|Have you seen this girl? Iliza]]
 </tw-passagedata><tw-passagedata pid="51" name="Have you seen this girl? Iliza" tags="" position="6341,2471" size="100,100">?Iliza eyes the flyer.
-&quot;She looks [[vaguely familiar]],&quot; ?Iliza says. She pokes at the flyer with her free hand.
+&quot;She looks vaguely familiar,&quot; ?Iliza says. She pokes at the flyer with her free hand.
 
 &quot;How old is this thing? I haven&#39;t seen something like this in years.&quot;
 
-[[&quot;I&#39;ve been searching for a while.&quot;]]</tw-passagedata><tw-passagedata pid="52" name="&quot;I&#39;ve been searching for a while.&quot;" tags="" position="6546,2471" size="100,100">&quot;Well you&#39;re not going to find her in this empty place.&quot;
+[[&quot;I&#39;ve been searching for a while.&quot;]]
+[[&#39;&quot;Vaguely familiar?&quot;&#39;|vaguely familiar]]</tw-passagedata><tw-passagedata pid="52" name="&quot;I&#39;ve been searching for a while.&quot;" tags="" position="6536,2437.6666666666665" size="100,100">&quot;Well you&#39;re not going to find her in this empty place.&quot;
 
-Iliza turns back to her drink.
+?Iliza turns back to her drink.
 
-[[Return|At the bar]]</tw-passagedata><tw-passagedata pid="53" name="vaguely familiar" tags="" position="6445,2671" size="100,100">&quot;I feel like I saw her near the [[Trash Heap|Trash Heap?]] some time ago.&quot;
+&lt;&lt;if $knownIliza1 == false&gt;&gt;[[&#39;&quot;Please miss, I&#39;d really appreciate some help.&quot;&#39;|Please miss]]&lt;&lt;elseif $knownIliza1 == true&gt;&gt;[[&#39;&quot;Please Iliza. Anything helps.&quot;&#39;|Please iliza]]&lt;&lt;/if&gt;&gt;
+[[Return|At the bar]]</tw-passagedata><tw-passagedata pid="53" name="vaguely familiar" tags="" position="6445,2671" size="100,100">&quot;I feel like I saw her near that pile of junk some time ago.&quot;
 
-[[&#39;&quot;So did you see her or do you just think you did?&quot;&#39;|Did you see her or not]]</tw-passagedata><tw-passagedata pid="54" name="Trash Heap?" tags="" position="6370,2821" size="100,100">&quot;Keep going down Main Street, you&#39;ll find it eventually. Can&#39;t miss that heap of [[broken screens]].&quot;
+[[&#39;&quot;So did you see her or do you just think you did?&quot;&#39;|Did you see her or not]]
+[[&#39;&quot;What junk?&quot;&#39;|Trash Heap?]]</tw-passagedata><tw-passagedata pid="54" name="Trash Heap?" tags="" position="6256.666666666667,2821" size="100,100">&quot;Keep going down Main Street, you&#39;ll find it eventually. Can&#39;t miss that heap of broken screens.&quot;
 
-Iliza takes another sip of her drink.
+?Iliza takes another sip of her drink.
 
-[[&#39;&quot;Thank you.&quot;&#39;|Thanks Iliza]]</tw-passagedata><tw-passagedata pid="55" name="Did you see her or not" tags="" position="6540,2834" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="56" name="broken screens" tags="" position="6293,2971" size="100,100">&quot;You ask a lot of questions you know,&quot; Iliza mumbles. He isn&#39;t sure if she intended for Him to hear that.
+[[&quot;What&#39;s the deal with that place anyway?&quot;|broken screens]]
+[[&#39;&quot;Thank you.&quot;&#39;|Thanks Iliza]]</tw-passagedata><tw-passagedata pid="55" name="Did you see her or not" tags="" position="6688.333333333333,2864" size="100,100">&quot;I&#39;m not going to help you if you&#39;re going to be rude.&quot;
+?Iliza returns to her drink.
 
-&quot;The Heap is a big pile of old, broken monitors. Been there for as long as I can remember.</tw-passagedata><tw-passagedata pid="57" name="Thanks Iliza" tags="" position="6445,2971" size="100,100">&quot;Don&#39;t mention it,&quot; she says.
+[[Return|At the bar]]</tw-passagedata><tw-passagedata pid="56" name="broken screens" tags="" position="6293,2971" size="100,100">&quot;You ask a lot of questions you know,&quot; ?Iliza mumbles. He isn&#39;t sure if she intended for Him to hear that.
+
+&quot;The Heap is a big pile of old, broken monitors. Been there for as long as I can remember. I don&#39;t even know where the damn things came from; this place isn&#39;t exactly tech-savvy.&quot;
+
+[[&#39;&quot;Thank you.&quot;&#39;|Thanks Iliza]]</tw-passagedata><tw-passagedata pid="57" name="Thanks Iliza" tags="" position="6445,2971" size="100,100">&quot;Don&#39;t mention it,&quot; she says.
 
 [[Return|At the bar]]</tw-passagedata><tw-passagedata pid="58" name="Finding K" tags="" position="400,7993" size="100,100">A look of shock crosses His face. ?K stands before Him, illuminated like an angel by the Void&#39;s spotlight.
 
@@ -669,8 +688,9 @@ The gentleness in her voice begins to strain.
 
 [[Open drawer|Open desk drawer]]
 
-&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Examine the bedroom" tags="" position="893,600" size="100,100">A queen-sized bed sits on the floor. A thick quilt decorated with floral patterns covers the bed. It looks as if it has been recently used.
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Examine the kitchen" tags="" position="893,600" size="100,100">He walks into the cramped kitchen space, its counters littered with various cooking tools.
 
+&lt;&lt;if $spoonTaken == false&gt;&gt;[[Examine cookware]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Open desk drawer" tags="" position="696,753" size="100,100">&lt;&lt;if $cigTaken == false&gt;&gt;He opens the desk drawer. He finds a pack of cigarettes inside. The box is slightly crumpled; the faded logo reads &quot;Jamie Lee.&quot;
 
 [[Take cigarettes]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $cigTaken == true&gt;&gt;He opens the desk drawer. It&#39;s empty.&lt;&lt;/if&gt;&gt;
@@ -683,20 +703,25 @@ The gentleness in her voice begins to strain.
 
 [[Lie down on screens]]
 &lt;&lt;if $knownVera1 == false&gt;&gt;[[Examine protruding mass of screens|Meeting Vera]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $knownVera1 == true&gt;&gt;[[Talk to Vera]]&lt;&lt;/if&gt;&gt;
-[[Return to Main Street|Go down Main Street]]</tw-passagedata><tw-passagedata pid="72" name="Talk to Vera" tags="" position="7182,2022" size="100,100">&quot;Hello,&quot; Vera says. &quot;Got something for me?&quot;
+[[Return to Main Street|Go down Main Street]]</tw-passagedata><tw-passagedata pid="72" name="Talk to Vera" tags="" position="7182,2022" size="100,100">&lt;&lt;if $veraOpen == true&gt;&gt;&quot;Hello,&quot; Vera says. &quot;Got something for me?&quot;
+&lt;&lt;if $haveJoy == false&gt;&gt;
+[[&#39;&quot;I need some Joy.&quot;&#39;|I need some Joy]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $haveMadness == false&gt;&gt;
+[[&#39;&quot;I need some Madness.&quot;&#39;|I need some Madness]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $haveIsolation == false&gt;&gt;
+[[&#39;&quot;I need some Isolation.&quot;&#39;|I need some Isolation]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $haveJealousy == false&gt;&gt;
+[[&#39;&quot;I need some Jealousy.&quot;&#39;|I need some Jealousy]]&lt;&lt;/if&gt;&gt;
+[[Back|Trash Heap Hub]]&lt;&lt;elseif $veraOpen == false&gt;&gt;Vera emerges from her hideaway as He approaches.
+&quot;I&#39;ve got some things you might find interesting. If you&#39;ve got something I find interesting, maybe we can make some kind of trade.&quot;
 
-[[I need some Joy]]
-[[I need some Madness]]
-[[I need some Isolation]]
-[[I need some Jealousy]]</tw-passagedata><tw-passagedata pid="73" name="I need some Joy" tags="" position="6695,2220" size="100,100">&quot;Ain&#39;t that a rarity,&quot; Vera says.
+[[&#39;&quot;What are you getting at?&quot;&#39;|Vera what]]
+[[(Leave) &quot;I don&#39;t think so.&quot;|Trash Heap Hub]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="I need some Joy" tags="" position="6635,2196.6666666666665" size="100,100">&quot;Ain&#39;t that a rarity,&quot; Vera says.
 &quot;My cat&#39;s been needing a new toy. Chewed the last one to bits and now she won&#39;t play with me. If you&#39;ve got something that can help with that, I&#39;ll get you some Joy.&quot;
 
-&lt;&lt;if $inventory.indexOf(&quot;Ball&quot;) != -1&gt;&gt;[[Give Vera the ball]]&lt;br \&gt;&lt;&lt;/if&gt;&gt;[[Back|Trash Heap Hub]]</tw-passagedata><tw-passagedata pid="74" name="I need some Madness" tags="U" position="6845,2220" size="100,100">&quot;If you ask me, you&#39;ve got a little bit of that swimming in your head already,&quot; Vera says.
+&lt;&lt;if $inventory.indexOf(&quot;Ball&quot;) != -1&gt;&gt;[[Give Vera the ball]]&lt;br \&gt;&lt;&lt;/if&gt;&gt;[[Back|Talk to Vera]]</tw-passagedata><tw-passagedata pid="74" name="I need some Madness" tags="U" position="6845,2220" size="100,100">&quot;If you ask me, you&#39;ve got a little bit of that swimming in your head already,&quot; Vera says.
 
-[[Back|Trash Heap Hub]]</tw-passagedata><tw-passagedata pid="75" name="I need some Isolation" tags="" position="6995,2218" size="100,100">&quot;We all do from time to time,&quot; Vera says.
+[[Back|Talk to Vera]]</tw-passagedata><tw-passagedata pid="75" name="I need some Isolation" tags="" position="6995,2218" size="100,100">&quot;We all do from time to time,&quot; Vera says.
 &quot;I think I get too much of it out here. Not that I can complain. I&#39;m what they call an introvert; I thrive off of being alone. Being around y&#39;all for too long tires me out. That&#39;s why I can&#39;t go to bars, ya know. And I&#39;ve really been craving a drink. Think you can get me one?&quot;
 
-&lt;&lt;if $inventory.indexOf(&quot;Beer&quot;) != -1&gt;&gt;[[Give Vera the bottle of beer]]&lt;br \&gt;&lt;&lt;/if&gt;&gt;[[Back|Trash Heap Hub]]</tw-passagedata><tw-passagedata pid="76" name="Examine trash" tags="To-the-Void" position="1003,100" size="100,100">The rubber ball lies alone at the bottom of the trash can.
+&lt;&lt;if $inventory.indexOf(&quot;Beer&quot;) != -1&gt;&gt;[[Give Vera the bottle of beer]]&lt;br \&gt;&lt;&lt;/if&gt;&gt;[[Back|Talk to Vera]]</tw-passagedata><tw-passagedata pid="76" name="Examine trash" tags="To-the-Void" position="1003,100" size="100,100">The rubber ball lies alone at the bottom of the trash can.
 
 [[Take ball]]
 
@@ -706,9 +731,7 @@ The gentleness in her voice begins to strain.
 
 &quot;Some &lt;span id=&quot;add&quot;&gt;Joy&lt;/span&gt; for ya.&quot;
 
-[[Back|Trash Heap Hub]]
-&lt;&lt;addToInv Joy&gt;&gt;
-&lt;&lt;removeFromInv Ball&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Joy" tags="Item Menu" position="423,1018" size="100,100">&lt;b&gt;Joy&lt;/b&gt;
+[[Back|Trash Heap Hub]]&lt;&lt;addToInv Joy&gt;&gt;&lt;&lt;removeFromInv Ball&gt;&gt;&lt;&lt;set $haveJoy = true&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Joy" tags="Item Menu" position="423,1018" size="100,100">&lt;b&gt;Joy&lt;/b&gt;
 A bifurcated white pill. Vera describes it as &quot;elation incarnate.&quot;
 
 &lt;&lt;if $drugTaken == false&gt;&gt;[[Take Joy]]&lt;&lt;/if&gt;&gt;
@@ -748,17 +771,15 @@ A elliptical green pill. Vera says the high is &quot;like nothing else.&quot;
 [[Back|Inventory]]
 &lt;&lt;removeFromInv Jealousy&gt;&gt;
 &lt;&lt;set $drugTaken = true&gt;&gt;
-&lt;&lt;set $drugJealousy = true&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="I need some Jealousy" tags="" position="7140,2218" size="100,100">&quot;&lt;b&gt;Need&lt;/b&gt; is an interesting word to use,&quot; Vera says.
-&quot;Let me tell ya a story. A long time ago, I was dating someone. They could shift into this amorphous smog and they&#39;d fill my lungs. I loved the feeling of sucking them down, feeling their overwhelming presence dry out my throat. Weird, huh? Anyway, I don&#39;t talk to them anymore. But I&#39;d love it if I could feel that sensation again. Think you could help me with that?
+&lt;&lt;set $drugJealousy = true&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="I need some Jealousy" tags="" position="7140,2218" size="100,100">&quot;&lt;i&gt;Need&lt;/i&gt; is an interesting word to use,&quot; Vera says.
+&quot;Let me tell ya a story. A long time ago, I was dating someone. They could shift into this amorphous smog and they&#39;d fill my lungs. I loved the feeling of sucking them down, feeling their overwhelming presence dry out my throat. Weird, huh? Anyway, I don&#39;t talk to them anymore. But I&#39;d love it if I could feel that sensation again. Think you could help me with that?&quot;
 
-&lt;&lt;if $inventory.indexOf(&quot;Cigarettes&quot;) != -1&gt;&gt;[[Give Vera cigarettes]]&lt;br \&gt;&lt;&lt;/if&gt;&gt;[[Back|Trash Heap Hub]]
+&lt;&lt;if $inventory.indexOf(&quot;Cigarettes&quot;) != -1&gt;&gt;[[Give Vera cigarettes]]&lt;br \&gt;&lt;&lt;/if&gt;&gt;[[Back|Talk to Vera]]
 &lt;&lt;set $knownVera7 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="Give Vera the bottle of beer" tags="" position="6995,2368" size="100,100">&quot;Thanks,&quot; Vera says. She takes the beer from Him and pulls a bar key from her bag. She pops open the bottle and downs the beer in a single swig.
 
 &quot;Refreshing. Anyway, here&#39;s some &lt;span id=&quot;add&quot;&gt;Isolation&lt;/span&gt; for ya.&quot;
 
-[[Back|Trash Heap Hub]]
-&lt;&lt;addToInv Isolation&gt;&gt;
-&lt;&lt;removeFromInv Beer&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="Meeting Vera" tags="" position="7708,1253" size="100,100">He stumbles upon a makeshift hideout tucked into the back of the Trash Heap. A startled yelp rings out. A young woman dressed in rags presses herself against the back of the hideout.
+[[Back|Trash Heap Hub]]&lt;&lt;addToInv Isolation&gt;&gt;&lt;&lt;removeFromInv Beer&gt;&gt;&lt;&lt;set $haveIsolation = true&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="Meeting Vera" tags="" position="7708,1253" size="100,100">He stumbles upon a makeshift hideout tucked into the back of the Trash Heap. A startled yelp rings out. A young woman dressed in rags presses herself against the back of the hideout.
 
 &quot;What are you doing here?&quot; she asks.
 
@@ -777,9 +798,10 @@ A elliptical green pill. Vera says the high is &quot;like nothing else.&quot;
 
 [[&#39;&quot;Where?!&quot;&#39;|Vera where]]</tw-passagedata><tw-passagedata pid="93" name="(Nod and leave)" tags="" position="7588,1653" size="100,100">&quot;Wait,&quot; Vera calls out. He pauses.
 
-&quot;I&#39;ve got some things you might find interesting. If you&#39;ve got [[something I find interesting|Vera what]], maybe we can make some kind of trade.&quot;
+&quot;I&#39;ve got some things you might find interesting. If you&#39;ve got something I find interesting, maybe we can make some kind of trade.&quot;
 
-[[(Leave) &quot;I don&#39;t think so&quot;|Trash Heap Hub]]</tw-passagedata><tw-passagedata pid="94" name="Vera what" tags="" position="7569,1808" size="100,100">&quot;I&#39;ve got pills. Pretty popular with the folks around here. Interested?&quot;
+[[&#39;&quot;What are you getting at?&quot;&#39;|Vera what]]
+[[(Leave) &quot;I don&#39;t think so.&quot;|Trash Heap Hub]]</tw-passagedata><tw-passagedata pid="94" name="Vera what" tags="" position="7569,1808" size="100,100">&quot;I&#39;ve got pills. Pretty popular with the folks around here. Interested?&quot;
 
 [[&#39;&quot;I am.&quot;&#39;|Vera pills]]
 [[(Leave) &quot;Not really.&quot;|Trash Heap Hub]]</tw-passagedata><tw-passagedata pid="95" name="Vera where" tags="U" position="7946,1672" size="100,100">&quot;I was digging around town and I ran into her. Can&#39;t recall how long ago that was though.&quot;
@@ -794,7 +816,7 @@ Her unclear answer proves annoying.
 [[Ask about the red pill]]
 [[Ask about the blue pill]]
 [[Ask about the green pill]]
-[[Leave|Trash Heap Hub]]</tw-passagedata><tw-passagedata pid="97" name="Ask about the white pill" tags="U" position="7398,2127" size="100,100">&quot;That there&#39;s Joy,&quot; she says.
+[[Return|Trash Heap Hub]]&lt;&lt;set $veraOpen = true&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="Ask about the white pill" tags="U" position="7398,2127" size="100,100">&quot;That there&#39;s Joy,&quot; she says.
 &quot;Elation incarnate. Highly recommend it if you&#39;re ailing.&quot;
 
 &lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="Ask about the red pill" tags="U" position="7548,2127" size="100,100">&quot;Ah, that&#39;s Madness,&quot; she says.
@@ -813,15 +835,21 @@ A pack of cigarettes. The label reads &quot;Jamie Lee.&quot;
 
 &quot;That takes me back. Big time. Anyway, thank you. Here&#39;s some &lt;span id=&quot;add&quot;&gt;Jealousy&lt;/span&gt; for ya.&quot;
 
-[[Back|Trash Heap Hub]]
-&lt;&lt;addToInv Jealousy&gt;&gt;
-&lt;&lt;removeFromInv Cigarettes&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="K convoBranch 3-2" tags="" position="533,8571" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="104" name="Lie down on screens" tags="" position="6539,2055" size="100,100">He carefully lowers Himself onto the broken mass. The edges of various electronics jab into His back. He finds the discomfort quiets His disquiet.
+[[Back|Trash Heap Hub]]&lt;&lt;addToInv Jealousy&gt;&gt;&lt;&lt;removeFromInv Cigarettes&gt;&gt;&lt;&lt;set $haveJealousy = true&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="K convoBranch 3-2" tags="" position="533,8571" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="104" name="Lie down on screens" tags="" position="6539,2055" size="100,100">He carefully lowers Himself onto the broken mass. The edges of various electronics jab into His back. He finds the discomfort quiets His disquiet.
 
 &lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="K convoBranch Joy" tags="" position="743,8093" size="100,100">&quot;I have some idea,&quot; ?K says. &quot;Again, you shouldn&#39;t have bothered.&quot;</tw-passagedata><tw-passagedata pid="106" name="K convoBranch I" tags="" position="744,8209" size="100,100">&quot;Not for me. If anything, I think life has picked up recently.&quot;
 
-[[&#39;&quot;I&#39;m happy to hear that you&#39;ve been doing well at least.&quot;&#39;|K convoBranch I-1]]</tw-passagedata><tw-passagedata pid="107" name="K convoBranch M" tags="" position="747,8331" size="100,100">?K strokes a gentle hand over the doll&#39;s head.
+[[&#39;&quot;I&#39;m happy to hear that you&#39;ve been doing well at least.&quot;&#39;|K convoBranch I-1]]</tw-passagedata><tw-passagedata pid="107" name="K convoBranch M" tags="" position="747,8331" size="100,100">She was holding a doll, one more lifelike than any He had seen before. More than that, it resembled Him.
 
-&quot;Do you like it?&quot; she asks. &quot;It&#39;s  been keeping me company.&quot;</tw-passagedata><tw-passagedata pid="108" name="K convoBranch I-1" tags="" position="909,8173" size="100,100">A stern look suddenly comes across ?K&#39;s face.
+No.
+
+It was exactly Him.
+
+?K strokes a gentle hand over the doll&#39;s head.
+
+&quot;Do you like it?&quot; she asks. &quot;It&#39;s been keeping me company.&quot;
+
+[[&quot;It&#39;s...unsettling&quot;|K convoBranch M-1]]</tw-passagedata><tw-passagedata pid="108" name="K convoBranch I-1" tags="" position="909,8173" size="100,100">A stern look suddenly comes across ?K&#39;s face.
 
 &quot;Are you?&quot;</tw-passagedata><tw-passagedata pid="109" name="K convoBranch 1-2-1" tags="" position="8,8742" size="100,100">?K takes a deep breath.
 &quot;Don&#39;t say things like that. For your own good. Don&#39;t say that.&quot;
@@ -858,8 +886,7 @@ A familiar voice surprises Him.
 
 &quot;Hello.&quot;
 
-[[Find source of voice|React to Luna]]
-&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+[[Find source of voice|React to Luna]]&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
 </tw-passagedata><tw-passagedata pid="122" name="gate3-2" tags="" position="2742,5716" size="100,100">&lt;h1&gt;THE&lt;br \&gt;LOWEST POINT&lt;/h1&gt;
 &lt;h2&gt;[[Continue|First Meeting with Girl]]&lt;/h2&gt;
 </tw-passagedata><tw-passagedata pid="123" name="First Meeting with Girl" tags="" position="2742,5866" size="100,100">Warm light envelops Him and solely Him. A spotlight.
@@ -876,7 +903,7 @@ She stares at Him, taken aback.&lt;&lt;/timedinsert&gt;&gt;
 &lt;&lt;timedinsert 3.5s&gt;&gt;[[&quot;Yes, you may.&quot;]]&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;/revision&gt;&gt;&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;/revision&gt;&gt;&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;/revision&gt;&gt;&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;/revision&gt;&gt;&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;/revision&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="React to Luna" tags="" position="5070,3917" size="100,100">He struggles to see through blurry eyes. He rubs them further and realizes Luna is sitting at the foot of His bed.
 
 [[&#39;&quot;You\&#39;re alive?&quot;&#39;|Luna&#39;s alive]]
-&lt;&lt;set $knownLuna4 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="gate4" tags="" position="400,7778" size="100,100">&lt;h1&gt;THE&lt;br \&gt;VOID&lt;/h1&gt;
+&lt;&lt;set $knownLuna4 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="gate4-1" tags="" position="400,7778" size="100,100">&lt;h1&gt;THE&lt;br \&gt;VOID&lt;/h1&gt;
 &lt;h2&gt;[[Continue|Finding K]]&lt;/h2&gt;
 &lt;&lt;audio &quot;void&quot; volume 0.1 play&gt;&gt;&lt;&lt;set $inVoid = true&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="&quot;Yes, you may.&quot;" tags="" position="2742,6016" size="100,100">&quot;&lt;&lt;reviselink no &#39;I\&#39;m not telling you anything!&#39;&gt;&gt;&lt;&lt;revision no&gt;&gt;&quot; she screams.&lt;&lt;becomes&gt;&gt;My name is &lt;span id=&quot;add&quot;&gt;Alice&lt;/span&gt;&quot; she says.&lt;&lt;addToPeople Alice&gt;&gt;&lt;&lt;set $knownAlice1 = true&gt;&gt;
 &lt;&lt;timedinsert 2.1s&gt;&gt;&quot;&lt;&lt;reviselink not &#39;No, it\&#39;s not.&#39;&gt;&gt;&lt;&lt;revision not&gt;&gt;&quot; she corrects. A firmness creeps into the edges of her voice.&lt;&lt;becomes&gt;&gt;It&#39;s a pleasure to meet you,&quot; she says.
@@ -905,9 +932,11 @@ He opens His eyes. Luna and Alice are gone. He is surrounded only by darkness.
 
 [[Talk to Ciara]]&lt;&lt;else&gt;&gt;A girl sits in a wooden chair with her hand pressed into her cheek. Her expression spells boredom. She looks a lot like &lt;i&gt;her&lt;/i&gt;. He takes a step forward and His brief notion of hope is dashed. Upon closer inspection, this girl isn&#39;t the one He is looking for.
 
-[[Talk to mysterious girl]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Talk to Ciara" tags="" position="4903,1768" size="100,100">&quot;Hello again,&quot; Ciara says. &quot;You eye me with such suspicion. It hurts sometimes you know?&quot;
+[[Talk to mysterious girl]]
+[[Return|Go down Main Street]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Talk to Ciara" tags="" position="4903,1768" size="100,100">&quot;Hello again,&quot; Ciara says. &quot;You eye me with such suspicion. It hurts sometimes you know?&quot;
 
-[[&#39;&quot;I think I should take the plunge.&quot;&#39;|Leaving the Outer Ring]]</tw-passagedata><tw-passagedata pid="133" name="Leaving the Outer Ring" tags="" position="4903,1918" size="100,100">&lt;&lt;if $knownLuna1 == true and $knownVera1 == true and $knownIliza1 == true and $knownCiara1 == true&gt;&gt;Ciara&#39;s lips curve into a slight smile.
+[[&#39;&quot;I think I should take the plunge.&quot;&#39;|Leaving the Outer Ring]]
+[[Return|Visit Mine]]</tw-passagedata><tw-passagedata pid="133" name="Leaving the Outer Ring" tags="" position="4903,1918" size="100,100">&lt;&lt;if $knownLuna1 == true and $knownVera1 == true and $knownIliza1 == true and $knownCiara0 == true&gt;&gt;Ciara&#39;s lips curve into a slight smile.
 &quot;We all have to take the plunge eventually. Maybe you&#39;re ready,&quot; she says.
 
 Ciara takes a deep breath and gazes up at the sky.
@@ -1006,13 +1035,17 @@ He falls into the darkness. Over time, He loses the ability to even sense the fa
 
 Nonetheless, He is certainly falling. 
 
-[[-- end Act I --|gate2]]</tw-passagedata><tw-passagedata pid="137" name="Place of Realization" tags="" position="3797,4244" size="100,100">At the bottom of the Airship is a small room with otherwordly decorations.
+[[-- end Act I --|gate2]]</tw-passagedata><tw-passagedata pid="137" name="Place of Realization" tags="" position="3798.666666666667,4232.333333333333" size="100,100">At the bottom of the Airship is a small room with otherwordly decorations.
 
 [[Talk to Ciara|Ciara realization]]</tw-passagedata><tw-passagedata pid="138" name="Ciara realization" tags="" position="3797,4394" size="100,100">[[&#39;&quot;I\&#39;m ready to use the machine.&quot;&#39;|Using the Realization Engine]]</tw-passagedata><tw-passagedata pid="139" name="Luna&#39;s alive" tags="" position="5070,4067" size="100,100">&quot;Of course I am,&quot; Luna says, waving dismissively.
 
-[[To Airship Deck|Airship Deck]]</tw-passagedata><tw-passagedata pid="140" name="Airship Deck" tags="" position="4671,4175" size="100,100">Cool wind blows steadily across His cheeks. He stands at the top of the Airship, a gigantic wooden structure flying through a bright blue sky.
+[[&#39;&quot;Ciara said the town would...&quot;&#39;|Ciara said]]
+[[&#39;&quot;Where am I?&quot;&#39;|where airship]]</tw-passagedata><tw-passagedata pid="140" name="Airship Deck" tags="" position="4671,4175" size="100,100">Cool wind blows steadily across His cheeks. He stands at the top of the Airship, a gigantic wooden structure flying through a bright blue sky.
 
-[[Visit the Place of Realization|Place of Realization]]</tw-passagedata><tw-passagedata pid="141" name="Using the Realization Engine" tags="" position="3797,4544" size="100,100">Ciara heaves herself from her chair, rubbing sleep from her eyes. She leans close to Him, inspecting His person. Primarily His face.
+[[Visit the Stern]]
+[[Visit the Exhaust]]&lt;&lt;if $realizationUnlocked == false&gt;&gt;
+[[Visit the Place of Realization|Door of Realization]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $realizationUnlocked == true&gt;&gt;[[Visit the Place of Realization|Place of Realization]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="141" name="Using the Realization Engine" tags="" position="3797,4544" size="100,100">Ciara heaves herself from her chair, rubbing sleep from her eyes. She leans close to Him, inspecting His person. Primarily His face.
 
 &quot;Maybe it&#39;s time. I&#39;ll warn you though; this machine uses a lot of energy. As soon as you step inside, &lt;span id=&quot;important&quot;&gt;the Airship won&#39;t be able to function&lt;/span&gt;. You sure about this?&quot;
 
@@ -1051,32 +1084,129 @@ Finally, His sight. Light fades from His eyes. He can no longer percieve the Gir
 
 &quot;Besides...well...&lt;&lt;timed 4.2s t8n&gt;&gt;
 &lt;&lt;set $voidCut = true&gt;&gt;
-&lt;span style=&quot;font-size:280%; font-family:omori&quot;&gt;&lt;&lt;timed 0.1s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;W&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.2s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;e&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.3s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;r&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.4s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;e&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.5s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;n&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.6s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;&#39;&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.7s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;t&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.8s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.9s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;y&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;o&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.1s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;u&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.2s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.3s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;t&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.4s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;h&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.5s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;e&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.6s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.7s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;l&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.8s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;a&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.9s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;s&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;t&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.1s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.2s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;o&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.3s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;n&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.4s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;e&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.5s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.6s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;w&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.7s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;h&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.8s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;o&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.9s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;s&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3.1s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;a&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3.2s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;w&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3.3s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3.4s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;K&lt;&lt;/shake&gt;&gt;&lt;&lt;next 0.2s t8n&gt;&gt;&lt;&lt;goto &quot;The Void&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Talk to mysterious girl" tags="" position="4898,1594" size="100,100">The girl&#39;s eyes follow Him as He moves towards her. It doesn&#39;t seem as though His presence is bringing her any excitement.
+&lt;span style=&quot;font-size:280%; font-family:omori&quot;&gt;&lt;&lt;timed 0.1s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;W&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.2s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;e&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.3s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;r&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.4s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;e&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.5s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;n&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.6s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;&#39;&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.7s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;t&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.8s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 0.9s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;y&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;o&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.1s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;u&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.2s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.3s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;t&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.4s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;h&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.5s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;e&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.6s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.7s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;l&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.8s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;a&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 1.9s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;s&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;t&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.1s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.2s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;o&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.3s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;n&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.4s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;e&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.5s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.6s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;w&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.7s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;h&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.8s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;o&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2.9s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;s&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3.1s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;a&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3.2s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;w&lt;&lt;/shake&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3.3s t8n&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3.4s t8n&gt;&gt;&lt;&lt;shake&gt;&gt;K&lt;&lt;/shake&gt;&gt;&lt;&lt;next 0.2s t8n&gt;&gt;&lt;&lt;goto &quot;The Void&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;set $besidesGlitch = true&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Talk to mysterious girl" tags="" position="4898,1594" size="100,100">The girl&#39;s eyes follow Him as He moves towards her. It doesn&#39;t seem as though His presence is bringing her any excitement.
 
 &quot;Yes?&quot; she asks.
 
-&lt;&lt;linkappend &#39;&quot;You look very similar to this girl I\&#39;m looking for.&quot;&#39; t8n&gt;&gt;
-
-&quot;Oh?&quot; she replies, &quot;and who&#39;s the girl?&quot;
-
-&lt;&lt;linkreplace &#39;(Present flyer)&#39; t8n&gt;&gt;He shows her the flyer of the missing girl. She holds the flyer at arm&#39;s length, studying the picture with an intense expression.
-
-&quot;You&#39;re right, this girl looks almost exactly like me,&quot; she marvels. &quot;It&#39;s in the jawline really.&quot;
-&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkappend&gt;&gt;
-&quot;Besides...&quot;
+[[&#39;&quot;You look very similar to this girl I&#39;m looking for.&quot;&#39;|You look similar]]
+&lt;&lt;if $besidesGlitch == false&gt;&gt;&quot;Besides...&quot;
 She trails off, much to His annoyance.
-
-[[&#39;&quot;Besides what?&quot;&#39;|Last person]]</tw-passagedata><tw-passagedata pid="153" name="Throw the ball" tags="" position="1738,32" size="100,100">He sits, draped across a chair, staring at a wall crisscrossed with yarn. He tightens His grip on the dark green ball in His hand.
+[[&#39;&quot;Besides what?&quot;&#39;|Last person]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Throw the ball" tags="" position="1738,32" size="100,100">He sits, draped across a chair, staring at a wall crisscrossed with yarn. He tightens His grip on the dark green ball in His hand.
 
 &lt;&lt;linkreplace &quot;Throw the ball&quot; t8n&gt;&gt;&lt;&lt;audio &quot;bounce&quot; play&gt;&gt;He throws the ball at the maze of yarn. It bounces off the wall and glides back into His hand.
 Some of the papers pinned to the wall flutter.  &lt;br \&gt;&lt;br \&gt;&lt;&lt;linkreplace &quot;Throw the ball&quot; t8n&gt;&gt;&lt;&lt;audio &quot;bounce&quot; play&gt;&gt;He throws the ball. It bounces back.
 His eyes follow the red yarn as it snakes from one paper to the next. A classic wall of clues.&lt;br \&gt;&lt;br \&gt;[[Throw the ball|Throw the ball3]]&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;set $MissingGirlViewed = false&gt;&gt;&lt;&lt;set $ginDrunk = 0&gt;&gt;&lt;&lt;set $inVoid = true&gt;&gt;&lt;&lt;set $voidLevel = 1&gt;&gt;
-&lt;&lt;set $drugTaken = false&gt;&gt;&lt;&lt;set $drugJoy = false&gt;&gt;&lt;&lt;set $drugIsolation = false&gt;&gt;&lt;&lt;set $drugMadness = false&gt;&gt;&lt;&lt;set $drugJealousy = false&gt;&gt;&lt;&lt;set $knownVera1 = false&gt;&gt;</tw-passagedata><tw-passagedata pid="154" name="gate3-1" tags="" position="3261,5072" size="100,100">&lt;&lt;timedinsert 1.4s&gt;&gt;//&quot;The bird fights its way out of the egg.//&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;timedinsert 4.2s&gt;&gt;// The egg is the world.//&lt;&lt;/timedinsert&gt;&gt; &lt;&lt;timedinsert 7s&gt;&gt;// Who would be born must first destroy a world.&quot;//&lt;&lt;/timedinsert&gt;&gt;
+&lt;&lt;set $drugTaken = false&gt;&gt;&lt;&lt;set $drugJoy = false&gt;&gt;&lt;&lt;set $drugIsolation = false&gt;&gt;&lt;&lt;set $drugMadness = false&gt;&gt;&lt;&lt;set $drugJealousy = false&gt;&gt;&lt;&lt;set $knownVera1 = false&gt;&gt;&lt;&lt;set $spoonTaken = false&gt;&gt;&lt;&lt;set $ilizaSpoken = false&gt;&gt;&lt;&lt;set $knownIliza1 = false&gt;&gt;&lt;&lt;set $besidesGlitch = false&gt;&gt;&lt;&lt;set $realizationUnlocked = false&gt;&gt;&lt;&lt;set $veraOpen = false&gt;&gt;&lt;&lt;set $haveJoy = false&gt;&gt;&lt;&lt;set $haveIsolation = false&gt;&gt;&lt;&lt;set $haveMadness = false&gt;&gt;&lt;&lt;set $haveJealousy = false&gt;&gt;</tw-passagedata><tw-passagedata pid="154" name="gate3-1" tags="" position="3261,5072" size="100,100">&lt;&lt;timedinsert 1.4s&gt;&gt;//&quot;The bird fights its way out of the egg.//&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;timedinsert 4.2s&gt;&gt;// The egg is the world.//&lt;&lt;/timedinsert&gt;&gt; &lt;&lt;timedinsert 7s&gt;&gt;// Who would be born must first destroy a world.&quot;//&lt;&lt;/timedinsert&gt;&gt;
 
 &lt;&lt;timedinsert 9.8s t8n&gt;&gt;-Hermann Hesse&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;timedinsert 12.6s&gt;&gt;
 
 [[Begin|gate3-2]]
-&lt;&lt;/timedinsert&gt;&gt;</tw-passagedata></tw-storydata>
+&lt;&lt;/timedinsert&gt;&gt;</tw-passagedata><tw-passagedata pid="155" name="K convoBranch M-1" tags="" position="910,8347" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="156" name="Examine cookware" tags="" position="893,750" size="100,100">He picks up a wooden cooking spoon. Something about it gives Him a feeling of faint warmth. The smallest smile spreads across His face.
+
+Moments later, the spoon falls apart, becoming a cloud of bright dust.
+
+He grimaces, taking a deep breathe as the dust fades to nothingness.
+&quot;One less sparkle to follow in my light,&quot; He mutters.
+
+&lt;&lt;set $spoonTaken true&gt;&gt;
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="157" name="Door of Realization" tags="" position="3796,4098" size="100,100">At the bottom of the Airship is a strange door surrounded by golden markings. He can hear a faint humming sound from beyond the door.
+
+Luna is leaning against the wall, lost in thought.
+
+[[Talk to Luna|Luna at the Door]]
+[[Examine door|Examine door of realization]]
+[[Return|Airship Deck]]</tw-passagedata><tw-passagedata pid="158" name="Luna at the Door" tags="" position="3576,3902" size="100,100">&quot;Hello again,&quot; Luna says without facing Him.
+
+[[&quot;Can you open this door?&quot;|Luna at the Door2]]</tw-passagedata><tw-passagedata pid="159" name="Luna at the Door2" tags="" position="3384,3975" size="100,100">&quot;I&#39;m afraid I can&#39;t. There&#39;s a rather curmudgeonly doorkeeper on the other side and they won&#39;t let anyone in without a certain password.&quot;
+
+&quot;Curmudgeonly?!&quot; a voice shouted from beyond the door.
+
+&quot;Maybe you can guess the password,&quot; Luna says. &quot;It&#39;s a puzzle for you, not for me.&quot;
+
+[[Approach the door]]</tw-passagedata><tw-passagedata pid="160" name="Approach the door" tags="" position="3356,4143" size="100,100">He approaches the door.
+
+&quot;You have the password?&quot; the voice beyond the door asks.
+
+[[&#39;&quot;Yes.&quot;&#39;|Door Password Entry]]
+[[&#39;&quot;No.&quot;&#39;|Door of Realization]]</tw-passagedata><tw-passagedata pid="161" name="Door Password Entry" tags="" position="3292,4293" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="162" name="Visit the Stern" tags="" position="4547.666666666667,3948.3333333333335" size="100,100">At the stern of the ship are a line of men with long, complicated metal tools in their hands. Something like metal detectors with drills attached. A thin tube snakes from the tool into metallilc backpacks strapped to each of the men.
+
+[[Ask the men what they&#39;re doing|mining dreams]]
+[[Return|Airship Deck]]</tw-passagedata><tw-passagedata pid="163" name="Visit the Exhaust" tags="" position="4746,4325" size="100,100">Deep inside the Airship, He finds the Exhaust Room. It&#39;s a small space, isolated far away from the rest of the ship. A man is crumpled against the wall, mumbling to himself. Beyond the man is a thick smog, seemingly hovering in place. The smog undulates in a way He finds mesmerizing.
+
+[[Enter the smog]]
+[[Talk to the man|Man in the Engine Room]]
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Enter the smog" tags="" position="4671,4475" size="100,100">He pushes His way into the smog. Surprisingly, it doesn&#39;t affect His breathing. As He wades further in, He finds a small clearing in the smog&#39;s center. Iliza stands there with an intoxicated expression on her face.
+
+[[Talk to Iliza|Iliza in the mist]]
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Man in the Engine Room" tags="" position="4821,4475" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="166" name="Iliza in the mist" tags="" position="4671,4625" size="100,100">He approaches the dazed Iliza. Her eyes flit towards Him, though they can&#39;t seem to bring Him into focus.
+
+&quot;?time&quot; Iliza mumbles.</tw-passagedata><tw-passagedata pid="167" name="gate4" tags="" position="1300,7385" size="100,100">&lt;&lt;timedinsert 1.4s&gt;&gt;//&quot;I thought to invent a game of knowledge,//&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;timedinsert 4.2s&gt;&gt;// I considered how it should be done.//&lt;&lt;/timedinsert&gt;&gt; &lt;&lt;timedinsert 7s&gt;&gt;//Next I defined it, making it as you see.&quot;//&lt;&lt;/timedinsert&gt;&gt;
+
+&lt;&lt;timedinsert 9.8s t8n&gt;&gt;-Nicolaus Cusanus&lt;&lt;/timedinsert&gt;&gt;&lt;&lt;timedinsert 12.6s&gt;&gt;
+
+[[Begin|gate4-1]]
+&lt;&lt;/timedinsert&gt;&gt;</tw-passagedata><tw-passagedata pid="168" name="Ok thanks no flyer" tags="" position="5623,1564" size="100,100">He heads up the stairs, still seemingly lost in His own world. Luna&#39;s eyes follow Him as He saunters away.
+
+[[Head into town|Go to the city]]</tw-passagedata><tw-passagedata pid="169" name="Talk to Iliza" tags="" position="5558.999999999999,2693.3333333333335" size="100,100">&quot;You again,&quot; ?Iliza mumbles between sips.
+
+[[&#39;&quot;Have you seen this girl?&quot;&#39; (Present flyer)|Have you seen this girl? Iliza]]
+[[Return|At the bar]]</tw-passagedata><tw-passagedata pid="170" name="Please miss" tags="" position="6581,2641" size="100,100">?Iliza grunts.
+&quot;&lt;span id=&quot;add&quot;&gt;Iliza&lt;/span&gt;. Not miss. Look, I&#39;m sorry but I don&#39;t think I can help you much. Only place where you might find something is that pile of junk at the edge of town; Vera&#39;s there and she has her finger on the pulse of any oddity you can think of.&quot;
+
+[[&#39;&quot;Junk?&quot;&#39;|Trash Heap?]]
+[[&#39;&quot;Thank you.&quot;|Thanks Iliza]]
+&lt;&lt;addToPeople Iliza&gt;&gt;
+&lt;&lt;set $knownIliza1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="171" name="Please iliza" tags="" position="6746,2589.3333333333335" size="100,100">&quot;Look, I&#39;m sorry but I don&#39;t think I can help you much. Only place where you might find something is that pile of junk at the edge of town; Vera&#39;s there and she has her finger on the pulse of any oddity you can think of.&quot;
+
+[[&#39;&quot;Junk?&quot;&#39;|Trash Heap?]]
+[[&#39;&quot;Thank you.&quot;|Thanks Iliza]]</tw-passagedata><tw-passagedata pid="172" name="You look similar" tags="" position="4601.333333333333,1450.6666666666665" size="100,100">&quot;Oh?&quot; she replies, &quot;and who&#39;s the girl?&quot;
+
+[[(Present flyer)|Show Ciara flyer]]</tw-passagedata><tw-passagedata pid="173" name="Show Ciara flyer" tags="" position="4413,1547.3333333333333" size="100,100">He shows her the flyer of the missing girl. She holds the flyer at arm&#39;s length, studying the picture with an intense expression.
+
+&quot;You&#39;re right, this girl looks almost exactly like me,&quot; she marvels. &quot;It&#39;s in the jawline really.&quot;
+
+She continues to stare at the flyer, touching her own face as if touching &lt;i&gt;hers&lt;/i&gt;.
+
+&quot;Sorry bud, she&#39;s cute and all but she isn&#39;t me. And I&#39;m pretty one of a kind. Don&#39;t know where you&#39;d find someone else who looks this marvelous.&quot;
+
+[[(Take flyer)|groaning to Ciara]]</tw-passagedata><tw-passagedata pid="174" name="groaning to Ciara" tags="" position="4304.666666666667,1674" size="100,100">Groaning, He takes the flyer back.
+
+[[&#39;&quot;Who are you then?&quot;&#39;|Ciara who]]</tw-passagedata><tw-passagedata pid="175" name="Ciara who" tags="" position="4061.3333333333335,1650.6666666666667" size="100,100">The girl lets out a strange laugh.
+&quot;My name&#39;s &lt;span id=&quot;add&quot;&gt;Ciara&lt;/span&gt;.&quot;
+&lt;&lt;addToPeople Ciara&gt;&gt;&lt;&lt;set $knownCiara0 = true&gt;&gt;
+She looks out at the gaping maw of the Mine. Her gaze seems distant.
+
+[[Leave|Ciara wait]]</tw-passagedata><tw-passagedata pid="176" name="Ciara wait" tags="" position="4061.3333333333335,1800.6666666666667" size="100,100">Suddenly, Ciara&#39;s gaze snaps to Him.
+&quot;Hold on.&quot;
+He pauses. Ciara leaps to her feet and takes His head into her hands. She presses their foreheads together, applying an uncomfortable amount of pressure.
+
+[[&#39;&quot;Can you not?&quot;&#39;|Ciara stop]]
+[[&#39;&quot;What are you doing?&quot;&#39;|Ciara stop]]</tw-passagedata><tw-passagedata pid="177" name="Ciara stop" tags="" position="4061.3333333333335,1950.6666666666667" size="100,100">Ciara releases Him.
+&quot;I just got a feeling from you.&quot;
+Her gaze returns to the Mine.
+&quot;I think I might be able to help you find your little friend. Your next step is at the bottom of the Mine, isn&#39;t it? You thought about jumping in, didn&#39;t you?&quot;
+
+[[(Nod)|Ciara stop2]]</tw-passagedata><tw-passagedata pid="178" name="Ciara stop2" tags="" position="4061.3333333333335,2100.666666666667" size="100,100">Ciara smiles.
+&quot;When you&#39;re ready, the Mine will be waiting.&quot;
+Ciara returns to her chair with a quiet, self-assured laugh.
+
+[[Return|Visit Mine]]</tw-passagedata><tw-passagedata pid="179" name="Ciara said" tags="" position="4916.666666666666,3957.0000000000005" size="100,100">&quot;Oh, her,&quot; Luna says with some displeasure. &quot;The less stock you put into that woman&#39;s vague words the better off you&#39;ll be.&quot;
+
+[[&#39;&quot;Where am I?&quot;&#39;|where airship]]</tw-passagedata><tw-passagedata pid="180" name="where airship" tags="" position="5070,4367" size="100,100">&quot;It&#39;s...a ship. Transporting us across the skies of indecision. Though I don&#39;t know how long it&#39;ll take for us to reach our destination.&quot;
+
+[[Ask Luna to elaborate|airship elaborate]]
+[[To Airship Deck]]</tw-passagedata><tw-passagedata pid="181" name="airship elaborate" tags="" position="5070,4517" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="182" name="To Airship Deck" tags="" position="4881.666666666667,4210.333333333333" size="100,100">He heaves Himself from the bed. Leaving Luna behind, He ventures up towards the Airship&#39;s deck.
+
+[[Continue|Airship Deck]]</tw-passagedata><tw-passagedata pid="183" name="mining dreams" tags="" position="4394.333333333333,3631.666666666667" size="100,100">He approaches the men, inquiring about the devices in their hands.
+
+&quot;This airship don&#39;t run on nothing,&quot; one of the men grunts.
+&quot;Someone&#39;s gotta mine the fuel. And this here&#39;s the fuel,&quot; another says, pointing at the end of his implement.
+The drill&#39;s quiet whirr barely reaches His ears. He leans forward and watches as the drill penetrates the clouds surrounding the airship, pistoning in and out, siphoning some liquid into the mens&#39; backpacks.
+&quot;These here are dreams,&quot; the largest of the men says. &quot;Ship won&#39;t run without dreams.&quot;
+
+[[Return|Visit the Stern]]</tw-passagedata><tw-passagedata pid="184" name="Examine door of realization" tags="" position="3957.6666666666665,3862.3333333333335" size="100,100">The golden markings appear to be the characters of some foreign language. They are engraved deep into the door&#39;s frame, their golden color dimmed by the erosion of time.
+
+[[Return|Door of Realization]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&null!==n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",r="\\s"===e?"\\S":e.replace(/^\[/,"[^"),n="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",a=n.replace("\\-",""),i=function(){var e="(?:[\\x2D.0-9A-Z_a-z\\xB7\\xC0-\\xD6\\xD8-\\xF6\\xF8-\\u037D\\u037F-\\u1FFF\\u200C\\u200D\\u203F\\u2040\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD]|[\\uD800-\\uDB7F][\\uDC00-\\uDFFF])";return"[A-Za-z](?:"+e+"*-"+e+"*|[0-9A-Za-z]*)"}(),o=function(){return"("+n+"+)\\(([^\\)\\|\\n]+)\\):|"+t+"*("+n+"+)"+t+"*:([^;\\|\\n]+);|"+t+"*((?:[#.]"+n+"+"+t+"*)+);"}();return Object.freeze({space:e,spaceNoTerminator:t,lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:r,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:n,anyLetterStrict:a,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",htmlTagName:i,cssIdOrClassSigil:"[#.]",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:o,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_stringify",{value:JSON.stringify}),Object.defineProperty(JSON,"stringify",{configurable:!0,writable:!0,value:function(e,t,r){return JSON._real_stringify(e,function(e,r){var n=r;if("function"==typeof t)try{n=t(e,n)}catch(e){}return void 0===n&&(n=["(revive:eval)","undefined"]),n},r)}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),i=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),o=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a,touch:i,transitionEndEvent:o})}(),Visibility=function(){function e(){return a}function t(){return a&&document[a.stateProperty]||"visible"}function r(){return Boolean(a)}function n(){return Boolean(a&&document[a.hiddenProperty])}var a=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return undefined}();return Object.freeze(Object.defineProperties({},{vendor:{get:e},state:{get:t},isEnabled:{value:r},isHidden:{value:n},hiddenProperty:{value:a&&a.hiddenProperty},stateProperty:{value:a&&a.stateProperty},changeEvent:{value:a&&a.changeEvent}}))}(),Fullscreen=function(){function e(e){var t=e||document.documentElement;return t===document.documentElement&&("msRequestFullscreen"===f.requestFn||Browser.isOpera&&Browser.operaVersion<15)&&(t=document.body),t}function t(){return f}function r(){return(f||null)&&document[f.element]}function n(){return Boolean(f&&document[f.isEnabled])}function a(){return Boolean(f&&document[f.element])}function i(t,r){var n=this;if(!f)return Promise.reject(new Error("fullscreen not supported"));var i=e(r);if("function"!=typeof i[f.requestFn])return Promise.reject(new Error("fullscreen not supported"));if(a())return Promise.resolve();if(p())return i[f.requestFn](t);var o=".Fullscreen_requestFullscreen";return new Promise(function(e,r){jQuery(i).off(o).one(""+f.errorEvent+o+" "+f.changeEvent+o,function(t){jQuery(n).off(o),t.type===f.errorEvent?r(new Error("unknown fullscreen request error")):e()}),i[f.requestFn](t)})}function o(){var e=this;if(!f||"function"!=typeof document[f.exitFn])return Promise.reject(new TypeError("fullscreen not supported"));if(!a())return Promise.reject(new TypeError("fullscreen mode not active"));if(p())return document[f.exitFn]();var t=".Fullscreen_exitFullscreen";return new Promise(function(r,n){jQuery(document).off(t).one(""+f.errorEvent+t+" "+f.changeEvent+t,function(a){jQuery(e).off(t),a.type===f.errorEvent?n(new Error("unknown fullscreen exit error")):r()}),document[f.exitFn]()})}function s(e,t){return a()?o():i(e,t)}function u(t,r){if(f){var n=e(r);$(n).on(f.changeEvent,t)}}function l(t,r){if(f){var n=e(r);t?$(n).off(f.changeEvent,t):$(n).off(f.changeEvent)}}function c(t,r){if(f){var n=e(r);$(n).on(f.errorEvent,t)}}function d(t,r){if(f){var n=e(r);t?$(n).off(f.errorEvent,t):$(n).off(f.errorEvent)}}var f=function(){try{return Object.freeze([{isEnabled:"fullscreenEnabled",element:"fullscreenElement",requestFn:"requestFullscreen",exitFn:"exitFullscreen",changeEvent:"fullscreenchange",errorEvent:"fullscreenerror"},{isEnabled:"webkitFullscreenEnabled",element:"webkitFullscreenElement",requestFn:"webkitRequestFullscreen",exitFn:"webkitExitFullscreen",changeEvent:"webkitfullscreenchange",errorEvent:"webkitfullscreenerror"},{isEnabled:"mozFullScreenEnabled",element:"mozFullScreenElement",requestFn:"mozRequestFullScreen",exitFn:"mozCancelFullScreen",changeEvent:"mozfullscreenchange",errorEvent:"mozfullscreenerror"},{isEnabled:"msFullscreenEnabled",element:"msFullscreenElement",requestFn:"msRequestFullscreen",exitFn:"msExitFullscreen",changeEvent:"MSFullscreenChange",errorEvent:"MSFullscreenError"}].find(function(e){return e.isEnabled in document}))}catch(e){}return undefined}(),p=function(){function e(){if(null!==t)return t;if(t=!1,f)try{var e=document.exitFullscreen();e.catch(function(){}),t=e instanceof Promise}catch(e){}return t}var t=null;return e}();return Object.freeze(Object.defineProperties({},{vendor:{get:t},element:{get:r},isEnabled:{value:n},isFullscreen:{value:a},request:{value:i},exit:{value:o},toggle:{value:s},onChange:{value:u},offChange:{value:l},onError:{value:c},offError:{value:d}}))}(),_ref3=function(){function e(e){for(var t=e.cloneNode(!0),r=document.createDocumentFragment(),n=void 0;null!==(n=t.firstChild);){if(n.nodeType===Node.ELEMENT_NODE)switch(n.nodeName.toUpperCase()){case"BR":case"DIV":case"P":r.appendChild(document.createTextNode(" "))}r.appendChild(n)}return r.textContent}function t(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)return e;if(e instanceof String)return String(e);if(e instanceof Number)return Number(e);if(e instanceof Boolean)return Boolean(e)
